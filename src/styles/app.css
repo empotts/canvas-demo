@@ -1,15 +1,17 @@
 @import 'tailwindcss';
 
 :root {
-  color-scheme: light;
-  --ink: #0f172a;
-  --paper: #f5f1e9;
-  --paper-soft: #fbf9f4;
-  --accent: #ff7f50;
-  --accent-deep: #f0522c;
-  --slate: #334155;
-  --mist: #cbd5f5;
-  --shadow: rgba(15, 23, 42, 0.12);
+  color-scheme: dark;
+  --ink: #e2e8f0;
+  --paper: #020617;
+  --paper-soft: #0f172a;
+  --panel: #111827;
+  --accent: #fb923c;
+  --accent-deep: #f97316;
+  --slate: #94a3b8;
+  --line: rgba(148, 163, 184, 0.3);
+  --line-strong: rgba(148, 163, 184, 0.45);
+  --shadow: rgba(2, 6, 23, 0.5);
 }
 
 * {
@@ -25,7 +27,7 @@ body {
   margin: 0;
   font-family: 'Space Grotesk', 'Futura', 'Gill Sans', sans-serif;
   color: var(--ink);
-  background: radial-gradient(circle at top, #fff7eb, var(--paper));
+  background: radial-gradient(circle at top, #0f172a, var(--paper));
 }
 
 .canvas-app {
@@ -63,24 +65,24 @@ body {
   font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  border: 1px solid rgba(15, 23, 42, 0.2);
+  border: 1px solid var(--line);
   background: var(--paper-soft);
   box-shadow: 0 8px 24px var(--shadow);
 }
 
 .status-chip[data-status='live'] {
   border-color: rgba(34, 197, 94, 0.6);
-  color: #15803d;
+  color: #86efac;
 }
 
 .status-chip[data-status='error'] {
   border-color: rgba(248, 113, 113, 0.7);
-  color: #b91c1c;
+  color: #fca5a5;
 }
 
 .canvas-panel {
-  background: linear-gradient(135deg, #fffaf0, #fdf4ea);
-  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: linear-gradient(135deg, #111827, #0b1220);
+  border: 1px solid var(--line);
   border-radius: 24px;
   padding: 20px;
   box-shadow: 0 24px 50px var(--shadow);
@@ -104,7 +106,7 @@ body {
   background: var(--paper-soft);
   border-radius: 999px;
   padding: 8px 14px;
-  border: 1px solid rgba(15, 23, 42, 0.12);
+  border: 1px solid var(--line);
 }
 
 .toolbar-group .label {
@@ -150,7 +152,8 @@ body {
 
 .ghost-button {
   background: transparent;
-  border-color: rgba(15, 23, 42, 0.3);
+  color: var(--ink);
+  border-color: var(--line-strong);
 }
 
 .room-form {
@@ -168,9 +171,10 @@ body {
 
 .room-form input {
   border-radius: 999px;
-  border: 1px solid rgba(15, 23, 42, 0.2);
+  border: 1px solid var(--line-strong);
   padding: 8px 14px;
-  background: white;
+  color: var(--ink);
+  background: #020617;
   min-width: 120px;
 }
 
@@ -179,21 +183,21 @@ body {
   border-radius: 20px;
   background: repeating-linear-gradient(
       0deg,
-      rgba(15, 23, 42, 0.05),
-      rgba(15, 23, 42, 0.05) 1px,
+      rgba(148, 163, 184, 0.1),
+      rgba(148, 163, 184, 0.1) 1px,
       transparent 1px,
       transparent 24px
     ),
     repeating-linear-gradient(
       90deg,
-      rgba(15, 23, 42, 0.04),
-      rgba(15, 23, 42, 0.04) 1px,
+      rgba(148, 163, 184, 0.08),
+      rgba(148, 163, 184, 0.08) 1px,
       transparent 1px,
       transparent 24px
     );
   height: min(70vh, 640px);
   overflow: hidden;
-  border: 1px solid rgba(15, 23, 42, 0.12);
+  border: 1px solid var(--line);
 }
 
 .canvas-stage canvas {
@@ -219,11 +223,12 @@ body {
   height: 12px;
   border-radius: 999px;
   background: currentColor;
-  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 0 6px rgba(15, 23, 42, 0.7);
 }
 
 .cursor-label {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid var(--line);
   padding: 4px 8px;
   border-radius: 999px;
 }

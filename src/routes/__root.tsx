@@ -1,7 +1,7 @@
 /// <reference types="vite/client" />
 import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
 import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
-import * as React from 'react'
+import type { ReactNode } from 'react'
 import { DefaultCatchBoundary } from '~/components/DefaultCatchBoundary'
 import { NotFound } from '~/components/NotFound'
 import appCss from '~/styles/app.css?url'
@@ -23,7 +23,7 @@ export const Route = createRootRoute({
       },
       {
         name: 'theme-color',
-        content: '#f5f1e9',
+        content: '#020617',
       },
     ],
     links: [
@@ -49,7 +49,7 @@ export const Route = createRootRoute({
         sizes: '16x16',
         href: '/favicon-16x16.png',
       },
-      { rel: 'manifest', href: '/site.webmanifest', color: '#f5f1e9' },
+      { rel: 'manifest', href: '/site.webmanifest', color: '#020617' },
       { rel: 'icon', href: '/favicon.ico' },
     ],
     scripts: [],
@@ -59,7 +59,7 @@ export const Route = createRootRoute({
   shellComponent: RootDocument,
 })
 
-function RootDocument({ children }: { children: React.ReactNode }) {
+function RootDocument({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
